@@ -5,11 +5,15 @@ import { setupApplicationTest } from 'ember-qunit'; // Needed for acceptance tes
 module('Acceptance | list pokemon', function (hooks) {
   setupApplicationTest(hooks); // Ensures that application is set up and torn down between each test
 
-  test('visiting /list-pokemon', async function (assert) {
-    // await visit('/list-pokemon');
-    visit('/');
+  test('should show pokemon on homepage', async function (assert) {});
 
-    // assert.equal(currentURL(), '/list-pokemon');
-    assert.equal(currentURL(), '/');
-  });
+  test('should link to info about the page', async function (assert) {});
+
+  test('should link to contact information', function (assert) {});
+
+  test('should list Pokemon', function (assert) {}); // By type?
+
+  test('should filter Pokemon by type', function (assert) {});
+
+  test('should show details about selected Pokemon', function (assert) {});
 });
