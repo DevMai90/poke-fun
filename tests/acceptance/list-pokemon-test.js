@@ -27,7 +27,40 @@ module('Acceptance | list pokemon', function (hooks) {
     assert.equal(currentURL(), '/contact', 'should navigate to contact page');
   });
 
-  test('should list Pokemon', async function (assert) {}); // By type?
+  test('should list Pokemon', async function (assert) {
+    await visit('/');
+
+    const pokemonList = this.element.querySelectorAll('.pokemon__container');
+
+    assert.equal(pokemonList.length, 3, 'should list three pokemon');
+
+    pokemonList.forEach((item) => {
+      assert.ok(
+        item.querySelector('.pokemon__name'),
+        'should contain pokemon name'
+      );
+
+      assert.ok(
+        item.querySelector('.pokemon__id'),
+        'should contain pokemon id'
+      );
+
+      assert.ok(
+        item.querySelector('.pokemon__description'),
+        'should contain pokemon description'
+      );
+
+      assert.ok(
+        item.querySelector('.pokemon__front'),
+        'should contain pokemon front view'
+      );
+
+      assert.ok(
+        item.querySelector('.pokemon__back'),
+        'should contain pokemon back view'
+      );
+    });
+  });
 
   test('should filter Pokemon by type', async function (assert) {});
 
