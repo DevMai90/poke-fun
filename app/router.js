@@ -6,7 +6,10 @@ const Router = EmberRouter.extend({
   rootURL: config.rootURL
 });
 
-Router.map(function() {
+Router.map(function () {
+  this.route('about', { path: '/boogers' }); // Tells Ember router to run about.js route file. Also renders the about hbs file
+  this.route('contact', { path: '/contact' });
+  this.route('pokemon', { path: '/digimon' });
 });
 
 export default Router;
