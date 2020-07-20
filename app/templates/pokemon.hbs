@@ -9,22 +9,24 @@
   {{/link-to}}
 </div>
 
-<article>
-  <h2>Random Pokemon of the Day</h2>
+<h2>OG LIZARDS</h2>
 
-  <h3>
-    <span class="pokemon__name">
-      {{this.model.name}}
+{{#each this.model as |pokemon|}}
+  <article>
+    <h3>
+      <span class="pokemon__name">
+        {{pokemon.name}}
+      </span>
+      <span class="pokemon__id">
+        #{{pokemon.id}}
+      </span>
+    </h3>
+    <p class="pokemon__description">First appeared in {{pokemon.version_group.name}}</p>
+    <span class="pokemon__front">
+      <img src={{pokemon.sprites.front_default}} alt="Front view of {{pokemon.name}}">
     </span>
-    <span class="pokemon__id">
-      #{{this.model.id}}
+    <span class="pokemon__back">
+      <img src={{pokemon.sprites.back_default}} alt="Back view of {{pokemon.name}}">
     </span>
-  </h3>
-  <p class="pokemon__description">First appeared in {{this.model.version_group.name}}</p>
-  <span class="pokemon__front">
-    <img src={{this.model.sprites.front_default}} alt="Front view of {{this.model.name}}">
-  </span>
-  <span class="pokemon__back">
-    <img src={{this.model.sprites.back_default}} alt="Back view of {{this.model.name}}">
-  </span>
-</article>
+  </article>
+{{/each}}
