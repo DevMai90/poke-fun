@@ -8,3 +8,23 @@
     About Us
   {{/link-to}}
 </div>
+
+<article>
+  <h2>Random Pokemon of the Day</h2>
+
+  <h3>
+    <span class="pokemon__name">
+      {{this.model.name}}
+    </span>
+    <span class="pokemon__id">
+      #{{this.model.id}}
+    </span>
+  </h3>
+  <p class="pokemon__description">First appeared in {{this.model.version_group.name}}</p>
+  <span class="pokemon__front">
+    <img src={{this.model.sprites.front_default}} alt="Front view of {{this.model.name}}">
+  </span>
+  <span class="pokemon__back">
+    <img src={{this.model.sprites.back_default}} alt="Back view of {{this.model.name}}">
+  </span>
+</article>
