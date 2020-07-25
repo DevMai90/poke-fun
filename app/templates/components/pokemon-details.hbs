@@ -1,18 +1,26 @@
-{{!-- this.pokemon because we are using a pokemon attribute in the pokemon route hbs file --}}
+{{!-- this.pokemonAttr because we are using a pokemonAttr attribute in the pokemon route hbs file --}}
 <article class="pokemon__container">
   <h3>
     <span class="pokemon__name">
-      {{this.pokemon.name}}
+      {{this.pokemonAttr.name}}
     </span>
     <span class="pokemon__id">
-      #{{this.pokemon.id}}
+      #{{this.pokemonAttr.id}}
     </span>
   </h3>
-  <p class="pokemon__description">First appeared in {{this.pokemon.version_group.name}}</p>
+  <p class="pokemon__description">First appeared in {{this.pokemonAttr.version_group.name}}</p>
   <span class="pokemon__front">
-    <img src={{this.pokemon.sprites.front_default}} alt="Front view of {{this.pokemon.name}}">
+    {{!-- Here, this.isWide is referring to the pokemon JS file, not the pokemon attribute --}}
+    <a
+      class="image {{if this.isWide "wide"}}"
+      role="button"
+      onClick={{action "toggleImageSize"}}
+    >
+      <img src={{this.pokemonAttr.sprites.front_default}} alt="Front view of {{this.pokemonAttr.name}}">
+      <small class="{{if this.conditionalClassName "conditional class name test"}}">Conditional class name test</small>
+    </a>
   </span>
   <span class="pokemon__back">
-    <img src={{this.pokemon.sprites.back_default}} alt="Back view of {{this.pokemon.name}}">
+    <img src={{this.pokemonAttr.sprites.back_default}} alt="Back view of {{this.pokemonAttr.name}}">
   </span>
 </article>

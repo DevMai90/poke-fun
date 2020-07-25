@@ -11,6 +11,8 @@
 
 <h2>OG LIZARDS</h2>
 
+{{!-- this.model is returned from pokemon route's JS file --}}
 {{#each this.model as |pokemon|}}
-  {{pokemon-details pokemon=pokemon}}
+  {{!-- Passing pokemon data into an attribute also called pokemon --}}
+  {{pokemon-details pokemonAttr=pokemon}}
 {{/each}}
