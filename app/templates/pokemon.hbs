@@ -12,21 +12,5 @@
 <h2>OG LIZARDS</h2>
 
 {{#each this.model as |pokemon|}}
-  <article class="pokemon__container">
-    <h3>
-      <span class="pokemon__name">
-        {{pokemon.name}}
-      </span>
-      <span class="pokemon__id">
-        #{{pokemon.id}}
-      </span>
-    </h3>
-    <p class="pokemon__description">First appeared in {{pokemon.version_group.name}}</p>
-    <span class="pokemon__front">
-      <img src={{pokemon.sprites.front_default}} alt="Front view of {{pokemon.name}}">
-    </span>
-    <span class="pokemon__back">
-      <img src={{pokemon.sprites.back_default}} alt="Back view of {{pokemon.name}}">
-    </span>
-  </article>
+  {{pokemon-details pokemon=pokemon}}
 {{/each}}

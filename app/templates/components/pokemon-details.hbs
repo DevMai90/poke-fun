@@ -1,0 +1,18 @@
+{{!-- this.pokemon because we are using a pokemon attribute in the pokemon route hbs file --}}
+<article class="pokemon__container">
+  <h3>
+    <span class="pokemon__name">
+      {{this.pokemon.name}}
+    </span>
+    <span class="pokemon__id">
+      #{{this.pokemon.id}}
+    </span>
+  </h3>
+  <p class="pokemon__description">First appeared in {{this.pokemon.version_group.name}}</p>
+  <span class="pokemon__front">
+    <img src={{this.pokemon.sprites.front_default}} alt="Front view of {{this.pokemon.name}}">
+  </span>
+  <span class="pokemon__back">
+    <img src={{this.pokemon.sprites.back_default}} alt="Back view of {{this.pokemon.name}}">
+  </span>
+</article>

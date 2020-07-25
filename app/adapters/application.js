@@ -1,5 +1,6 @@
 import DS from 'ember-data';
 
 export default DS.JSONAPIAdapter.extend({
-  namespace: '/api/v2'
+  // No beginning forward slash
+  namespace: 'api/v2'
 });
