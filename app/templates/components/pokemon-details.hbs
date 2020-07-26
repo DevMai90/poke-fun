@@ -2,7 +2,9 @@
 <article class="pokemon__container">
   <h3>
     <span class="pokemon__name">
-      {{this.pokemonAttr.name}}
+      {{!-- this.pokemonAttr.name gets passed into the helper function as an array by default. --}}
+      {{!-- Even if it is a single argument --}}
+      {{this.pokemonAttr.name}} - {{is-this-charizard this.pokemonAttr.name}}
     </span>
     <span class="pokemon__id">
       #{{this.pokemonAttr.id}}
