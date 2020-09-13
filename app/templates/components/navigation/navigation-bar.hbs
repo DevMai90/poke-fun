@@ -1,39 +1,41 @@
-<nav class="navbar navbar-expand-md navbar-light bg-light">
-  {{navigation/nav-brand}}
+<nav class="navbar navbar-expand-lg navbar-light navbar-dark bg-danger ">
+  <div class="container">
+    {{navigation/nav-brand}}
 
-  <button
-    class="navbar-toggler"
-    type="button"
-    data-toggle="collapse"
-    data-target="#navbar-content"
-  >
-    <span class="navbar-toggler-icon"></span>
-  </button>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbar-content"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-  <div class="collapse navbar-collapse" id="navbar-content">
-    {{!-- todo - Create links in an object and iterate through --}}
-    <ul class="navbar-nav ml-auto">
-      {{#navigation/nav-item class="menu-home" link="home"}}
-        Home
-      {{/navigation/nav-item}}
-      {{#navigation/nav-item class="menu-generations" link="generations"}}
-        Generations
-      {{/navigation/nav-item}}
-      {{#navigation/nav-item class="menu-game" link="games"}}
-        Games
-      {{/navigation/nav-item}}
-      {{#navigation/nav-item class="menu-search" link="search"}}
-        Search
-      {{/navigation/nav-item}}
-      {{#navigation/nav-item class="menu-pokedex" link="pokedex"}}
-        Pokedex
-      {{/navigation/nav-item}}
-      {{#navigation/nav-item class="menu-about" link="about"}}
-        About
-      {{/navigation/nav-item}}
-      {{#navigation/nav-item class="menu-contact" link="contact"}}
-        Contact
-      {{/navigation/nav-item}}
-    </ul>
+    <div class="collapse navbar-collapse" id="navbar-content">
+      <ul class="navbar-nav ml-auto">
+        {{#navigation/nav-item class="menu-home" link="home"}}
+          Home
+        {{/navigation/nav-item}}
+        {{#navigation/nav-item class="menu-generations" link="generations"}}
+          Generations
+        {{/navigation/nav-item}}
+        {{#navigation/nav-item class="menu-game" link="games"}}
+          Games
+        {{/navigation/nav-item}}
+        {{#navigation/nav-item class="menu-search" link="search"}}
+          Search
+        {{/navigation/nav-item}}
+        {{#navigation/nav-item class="menu-pokedex" link="pokedex"}}
+          Pokedex
+        {{/navigation/nav-item}}
+        {{#navigation/nav-item class="menu-about" link="about"}}
+          About
+        {{/navigation/nav-item}}
+        {{#navigation/nav-item class="menu-contact" link="contact"}}
+          Contact
+        {{/navigation/nav-item}}
+      </ul>
+    </div>
+
   </div>
 </nav>
