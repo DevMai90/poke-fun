@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+    {{#link-to "index" class="navbar-brand"}}
+      <h1>
+        <em>Pokemon Fun</em>
+      </h1>
+    {{/link-to}}
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbar-content">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          {{#link-to "about" class="nav-link menu-about"}}
+            About
+          {{/link-to}}
+        </li>
+        <li class="nav-item">
+          {{#link-to "contact" class="nav-link menu-contact"}}
+            Contact
+          {{/link-to}}
+        </li>
+      </ul>
+    </div>
+  {{yield}}
+  </nav>
