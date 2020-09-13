@@ -8,13 +8,13 @@ module('Acceptance | list pokemon', function (hooks) {
   test('should show pokemon on homepage', async function (assert) {
     await visit('/');
 
-    assert.equal(currentURL(), '/digimon', 'should redirect automatically');
+    assert.equal(currentURL(), '/home', 'should redirect automatically');
   });
 
   test('should link to info about the page', async function (assert) {
     await visit('/');
 
-    await click('.menu-about');
+    await click('.menu-about a');
 
     assert.equal(currentURL(), '/boogers', 'should navigate to about page');
   });
@@ -22,7 +22,7 @@ module('Acceptance | list pokemon', function (hooks) {
   test('should link to contact information', async function (assert) {
     await visit('/');
 
-    await click('.menu-contact');
+    await click('.menu-contact a');
 
     assert.equal(currentURL(), '/contact', 'should navigate to contact page');
   });

@@ -3,24 +3,19 @@ import { setupRenderingTest } from 'ember-qunit';
 import { render } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 
-module('Integration | Component | navigation/nav-item', function(hooks) {
+module('Integration | Component | navigation/nav-item', function (hooks) {
   setupRenderingTest(hooks);
 
-  test('it renders', async function(assert) {
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.set('myAction', function(val) { ... });
+  test('it renders', async function (assert) {
+    assert.expect(2);
 
-    await render(hbs`{{navigation/nav-item}}`);
-
-    assert.equal(this.element.textContent.trim(), '');
-
-    // Template block usage:
     await render(hbs`
       {{#navigation/nav-item}}
-        template block text
+        About
       {{/navigation/nav-item}}
     `);
 
-    assert.equal(this.element.textContent.trim(), 'template block text');
+    assert.dom('.nav-link').exists();
+    assert.dom('.nav-item').hasText('About');
   });
 });
