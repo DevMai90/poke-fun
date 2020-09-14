@@ -15,7 +15,8 @@
     "lint:hbs": "ember-template-lint .",
     "lint:js": "eslint .",
     "start": "ember serve",
-    "test": "ember test"
+    "test": "ember test",
+    "sass": "node-sass -w app/styles/ -o app/styles/ --recursive --output-style compressed"
   },
   "devDependencies": {
     "@ember/jquery": "^0.5.2",
@@ -47,5 +48,8 @@
   },
   "engines": {
     "node": "6.* || 8.* || >= 10.*"
+  },
+  "dependencies": {
+    "node-sass": "^4.14.1"
   }
 }
