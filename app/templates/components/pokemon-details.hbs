@@ -1,28 +1,33 @@
 {{!-- this.pokemonAttr because we are using a pokemonAttr attribute in the pokemon route hbs file --}}
-<article class="pokemon__container">
-  <h3>
-    <span class="pokemon__name">
-      {{!-- this.pokemonAttr.name gets passed into the helper function as an array by default. --}}
-      {{!-- Even if it is a single argument --}}
-      {{this.pokemonAttr.name}} - {{is-this-charizard this.pokemonAttr.name}}
+<article class="pokemon-details__container card border-danger">
+  <div class="card-header bg-danger text-light">
+    <h4 class="d-flex justify-content-between">
+      <span class="pokemon-details__name">
+        {{!-- this.pokemonAttr.name gets passed into the helper function as an array by default. --}}
+        {{!-- Even if it is a single argument --}}
+        {{name}} - {{is-this-charizard name}}
+      </span>
+      <span class="pokemon-details__id">
+        #{{id}}
+      </span>
+    </h4>
+  </div>
+
+  <div class="card-body">
+    <p class="pokemon-details__description">First appeared in {{version_group.name}}</p>
+    <span class="pokemon-details__front">
+      {{!-- Here, this.isWide is referring to the pokemon JS file, not the pokemon attribute --}}
+      <a
+        class="image {{if this.isWide "wide"}}"
+        role="button"
+        onClick={{action "toggleImageSize"}}
+      >
+        <img src={{sprites.front_default}} alt="Front view of {{name}}">
+        <small class="{{if this.conditionalClassName "conditional class name test"}}">Conditional class name test</small>
+      </a>
     </span>
-    <span class="pokemon__id">
-      #{{this.pokemonAttr.id}}
+    <span class="pokemon-details__back">
+      <img src={{sprites.back_default}} alt="Back view of {{name}}">
     </span>
-  </h3>
-  <p class="pokemon__description">First appeared in {{this.pokemonAttr.version_group.name}}</p>
-  <span class="pokemon__front">
-    {{!-- Here, this.isWide is referring to the pokemon JS file, not the pokemon attribute --}}
-    <a
-      class="image {{if this.isWide "wide"}}"
-      role="button"
-      onClick={{action "toggleImageSize"}}
-    >
-      <img src={{this.pokemonAttr.sprites.front_default}} alt="Front view of {{this.pokemonAttr.name}}">
-      <small class="{{if this.conditionalClassName "conditional class name test"}}">Conditional class name test</small>
-    </a>
-  </span>
-  <span class="pokemon__back">
-    <img src={{this.pokemonAttr.sprites.back_default}} alt="Back view of {{this.pokemonAttr.name}}">
-  </span>
+  </div>
 </article>

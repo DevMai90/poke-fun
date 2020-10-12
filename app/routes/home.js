@@ -2,11 +2,14 @@ import Route from '@ember/routing/route';
 import RSVP from 'rsvp';
 
 /**
- * 802 unique Pokemon as of Gen 7
+ * 802 Pokemon variations as of Gen 7
  * Gen 8 Pokemon in process of being added to API
+ * Excludes variations
  * https://github.com/PokeAPI/pokeapi/issues/520
+ * 
+ * TODO - Add variations starting at 100001
  */
-const TOTAL_NUMBER_OF_POKEMON = 802;
+const TOTAL_NUMBER_OF_POKEMON = 1;
 
 export default Route.extend({
 
