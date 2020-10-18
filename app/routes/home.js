@@ -9,7 +9,7 @@ import RSVP from 'rsvp';
  * 
  * TODO - Add variations starting at 100001
  */
-const TOTAL_NUMBER_OF_POKEMON = 1;
+const TOTAL_NUMBER_OF_POKEMON = 802;
 
 export default Route.extend({
 

@@ -14,7 +14,6 @@
   </div>
 
   <div class="card-body">
-    <p class="pokemon-details__description">First appeared in {{version_group.name}}</p>
     <span class="pokemon-details__front">
       {{!-- Here, this.isWide is referring to the pokemon JS file, not the pokemon attribute --}}
       <a
@@ -28,6 +27,8 @@
     </span>
     <span class="pokemon-details__back">
       <img src={{sprites.back_default}} alt="Back view of {{name}}">
+      {{log pokemonName}}
     </span>
+    <p class="pokemon-details__description">Appears in {{appearances}}</p>
   </div>
 </article>

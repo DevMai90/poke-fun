@@ -1,6 +1,6 @@
 import { helper } from '@ember/component/helper';
 
-const targetPokemonName = 'charizard';
+const targetPokemonName = 'Charizard';
 
 export function isThisCharizard([name]) {
   // argument gets passed into array
