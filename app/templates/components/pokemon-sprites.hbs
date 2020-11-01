@@ -1,0 +1,10 @@
+<div class="pokemon-sprites">
+  <span class="pokemon-details__front" data-test-pokemon-sprite-front>
+    <img src={{sprites.front_default}} alt="Front view of {{name}}">
+  </span>
+  {{#if sprites.back_default}}
+    <span class="pokemon-details__back" data-test-pokemon-sprite-back>
+      <img src={{sprites.back_default}} alt="Back view of {{name}}">
+    </span>
+  {{/if}}
+</div>
