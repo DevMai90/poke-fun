@@ -21,6 +21,23 @@
       sprites=this.sprites
     }}
     <small class="{{if this.conditionalClassName "conditional class name test"}}">Conditional class name test</small>
-    <p class="pokemon-details__description">Appears in {{appearances}}</p>
+    <div class="pokemon-stats-types">
+      {{!-- Becomes available in 'this' context and in attrs --}}
+      {{pokemon-stats
+        types=this.types
+        weight=this.weight
+        height=this.height
+        attrTest='attrTest'
+      }}
+    </div>
+    {{!-- TODO - Appearances component or place into stats --}}
+    <div class="row">
+      <div class="col-2">
+        Appearances:
+      </div>
+      <div class="col-10">
+        {{appearances}}
+      </div>
+    </div>
   </div>
 </article>
