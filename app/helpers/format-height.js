@@ -1,10 +1,10 @@
 import { helper } from '@ember/component/helper';
 
 export function formatHeight([height]) {
-  const DECIMETER_TO_INCHES = 3.93701
+  const DECIMETERS_TO_INCHES = 3.93701
   const INCHES_IN_ONE_FOOT = 12;
 
-  const heightInInches = height * DECIMETER_TO_INCHES;
+  const heightInInches = height * DECIMETERS_TO_INCHES;
   let convertedFeet = Math.floor(heightInInches / INCHES_IN_ONE_FOOT);
   let convertedRemainingInches = (heightInInches % INCHES_IN_ONE_FOOT).toFixed(0);
 
